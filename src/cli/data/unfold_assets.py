@@ -114,9 +114,11 @@ def handle_asset(
     extension = asset_path.suffix.lower()
 
     if extension in ARCHIVE_EXTRENSIONS:
-        handle_archive(
-            asset_path, output_dir, archive_name=f"{archive_name}_{asset_path.stem}"
+        archive_name = merge_archive_name(
+            archive_name,
+            asset_path.stem,
         )
+        handle_archive(asset_path, output_dir, archive_name=archive_name)
     elif extension in ACCEPTED_EXTENSIONS:
         handle_one_file(asset_path, output_dir, archive_name=archive_name)
     else:
