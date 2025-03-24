@@ -1,0 +1,20 @@
+[project]
+name = "game-anim-gen"
+version = "0.1.0"
+description = "Insert descrition here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.3",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
+    "pillow>=11.1.0",
+    "py7zr>=0.22.0",
+    "pydantic>=2.10.6",
+    "rarfile>=4.2",
+    "rich>=13.9.4",
+    "selenium>=4.30.0",
+    "tqdm>=4.67.1",
+    "typer>=0.15.2",
+    "webdriver-manager>=4.0.2",
+]
