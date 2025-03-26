@@ -101,7 +101,10 @@ def update_game_cells_list(driver, previous_game_cells_count: int) -> list[WebEl
     return updated_game_cells[previous_game_cells_count:]
 
 
-@app.command()
+@app.command(
+    name="scrape_metadata",
+    help="Scrape the metadata of the free game assets from itch.io.",
+)
 def scrape_metadata(
     base_url: str = typer.Argument(
         "https://itch.io/game-assets/free",

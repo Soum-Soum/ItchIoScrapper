@@ -108,7 +108,10 @@ def close_all_except_first(driver: webdriver.Firefox):
     driver.switch_to.window(driver.window_handles[0])
 
 
-@app.command()
+@app.command(
+    name="scrape_assets_packs",
+    help="Scrape asset packs from the given metadata directory.",
+)
 def scrape_assets_packs(
     asset_metadata_dir: Path = typer.Option(
         "./output/assets/metadata",

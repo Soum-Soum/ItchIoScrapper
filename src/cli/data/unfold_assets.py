@@ -126,7 +126,10 @@ def handle_asset(
         return
 
 
-@app.command()
+@app.command(
+    name="unfold_assets",
+    help="Unfold assets from the given directory.",
+)
 def unfold(
     asset_dir: Path = typer.Argument(
         "./output/assets/assets",
